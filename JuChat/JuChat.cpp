@@ -1,15 +1,13 @@
 ﻿#include <iostream>
-#include "Registration.h"
+#include "RegLog.h"
 #include "Chat.h"
 
-std::vector<std::string> chat;
 
 int main()
 {
-	Registration registration;
-	registration.init();
+	RegLog regLog;
+	regLog.init();
 	Chat chat;
-	chat.init(registration);
+	chat.init(regLog);
 	return 0;
-
 }

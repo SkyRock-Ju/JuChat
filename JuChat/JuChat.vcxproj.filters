@@ -21,10 +21,10 @@
     <ClCompile Include="User.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Registration.cpp">
+    <ClCompile Include="Chat.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Chat.cpp">
+    <ClCompile Include="RegLog.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +32,10 @@
     <ClInclude Include="User.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Registration.h">
+    <ClInclude Include="Chat.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Chat.h">
+    <ClInclude Include="RegLog.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

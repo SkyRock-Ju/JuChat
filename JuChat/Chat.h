@@ -1,11 +1,14 @@
 #pragma once
-#include "Registration.h"
+#include "RegLog.h"
 class Chat
 {
 public:
 	
-	void init(Registration registration);
+	void init(RegLog regLog);
 private:
+	void readFileMessages();
+	void openFileMessages();
+
 	std::fstream read;
 	std::string messages = "";
 	std::string newMessage = "";

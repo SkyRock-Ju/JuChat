@@ -152,13 +152,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="JuChat.cpp" />
-    <ClCompile Include="Registration.cpp" />
+    <ClCompile Include="RegLog.cpp" />
     <ClCompile Include="Chat.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chat.h" />
-    <ClInclude Include="Registration.h" />
+    <ClInclude Include="RegLog.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

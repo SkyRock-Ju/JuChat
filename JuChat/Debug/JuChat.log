@@ -1,2 +1,10 @@
-﻿  Chat.cpp
+﻿  JuChat.cpp
+  RegLog.cpp
+c:\users\skyro\source\repos\juchat\juchat\reglog.cpp(9): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\skyro\source\repos\juchat\juchat\reglog.cpp(17): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\skyro\source\repos\juchat\juchat\reglog.cpp(37): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\skyro\source\repos\juchat\juchat\reglog.cpp(88): warning C4018: <: несоответствие типов со знаком и без знака
+  Chat.cpp
+  User.cpp
+  Создание кода...
   JuChat.vcxproj -> C:\Users\skyro\source\repos\JuChat\Debug\JuChat.exe
