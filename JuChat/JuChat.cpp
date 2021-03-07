@@ -1,13 +1,12 @@
 ﻿#include <iostream>
-#include "RegLog.h"
 #include "Chat.h"
 
+RegLog regLog;
+Chat chat;
 
 int main()
 {
-	RegLog regLog;
 	regLog.init();
-	Chat chat;
 	chat.init(regLog);
 	return 0;
 }

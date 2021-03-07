@@ -3,14 +3,14 @@
 class Chat
 {
 public:
-	
 	void init(RegLog regLog);
+
 private:
-	void readFileMessages();
-	void openFileMessages();
+	void privateMessage(RegLog regLog);
 
 	std::fstream read;
 	std::string messages = "";
 	std::string newMessage = "";
-	std::ofstream file;
+	std::ofstream filePublicChat;
+	std::ofstream filePrivateMessage;
 };

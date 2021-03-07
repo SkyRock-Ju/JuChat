@@ -1,10 +1,6 @@
 #include "RegLog.h"
 
-RegLog::RegLog()
-{
-};
-
-bool RegLog::registrationCheck(std::string username, std::string password)
+bool RegLog::registrationLettersCheck(std::string username, std::string password)
 {
 	for (int i = 0; i < username.length(); i++)
 	{
@@ -28,7 +24,6 @@ bool RegLog::registrationCheck(std::string username, std::string password)
 
 void RegLog::init()
 {
-	std::string usersAndPass;
 	std::fstream read;
 	read.open("D:\\chat\\accounts\\accounts.txt", std::ios::in);
 	while (std::getline(read, usersAndPass))
@@ -42,16 +37,14 @@ void RegLog::init()
 			}
 		}
 	}
-	char choose;
-	bool check = true;
-	while (check)
+	read.close();
+
+	while (true)
 	{
 		std::cout << "Type L to Login or R for registration" << std::endl;
 		std::cin >> choose;
 		if (choose == 'R')
 		{
-			//check = false;
-
 			std::cout << "ENTER Username:";
 			std::string username;
 			std::cin >> username;
@@ -60,12 +53,16 @@ void RegLog::init()
 			std::string password;
 			std::cin >> password;
 
-			if (registrationCheck(username, password))
+			if (registrationLettersCheck(username, password))
 			{
+				
 				std::ofstream file;
 				file.open("D:\\chat\\accounts\\accounts.txt", std::ios::app);
+				std::string path = "D:\\chat\\accounts\\" + username;
+				_mkdir(path);
 				file << username << ":" << password << std::endl;
 				std::cout << "Successfull registration" << std::endl;
+				file.close();
 				continue;
 			}
 		}
@@ -87,12 +84,11 @@ void RegLog::init()
 
 			for (int i = 0; i < users.size(); i++)
 			{
-				if (users[i].getUsername() == username && users[i].getPassword() == password) // check if error
+				if (users[i].getUsername() == username && users[i].getPassword() == password)
 				{
 					std::cout << users[i].getUsername() << std::endl;
 					std::cout << "Successful login" << std::endl;
 					currentUser = i;
-					check = false;
 					return;
 				}
 			}
